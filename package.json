@@ -25,7 +25,7 @@
     "@babel/node": "^7.6.1",
     "@babel/preset-env": "^7.6.0",
     "@babel/register": "^7.6.0",
-    "concurrently": "^4.0.1",
+    "concurrently": "^4.1.2",
     "joi": "^14.3.1",
     "live-server": "^1.2.0",
     "nodemon": "^1.19.2"

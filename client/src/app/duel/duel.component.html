@@ -14,8 +14,45 @@
     <app-text-input
       (usernameChange)="receiveUsernameTwo($event)"
     ></app-text-input>
+
   </div>
+  <div *ngIf="errorMsg" class="error-box">{{ errorMsg }}</div>
   <br />
   <br />
   <button class="submit-button" (click)="onSubmit()">Duel</button>
+  <div *ngIf="usersFound && !errorMsg" class="duel-results-box">
+    <h2>{{ winner }}</h2>
+
+    <div class="dueling-users-box">
+      <div [ngClass]="userOneClass" class="user-box">
+        <h3>User {{ userOne.username }} Stats:</h3>
+        <p>Name: {{ userOne.name }}</p>
+        <p>Location: {{ userOne.location }}</p>
+        <p>Bio: {{ userOne.bio }}</p>
+        <p>Titles: {{ userOne.titles?.join(', ') || 'None' }}</p>
+        <p>Favorite Language: {{ userOne.favorite_language }}</p>
+        <p>Public Repos: {{ userOne.public_repos }}</p>
+        <p>Total Stars: {{ userOne.total_stars }}</p>
+        <p>Highest Starred Repository: {{ userOne.highest_starred }}</p>
+        <p>Perfect Repos: {{ userOne.perfect_repos }}</p>
+        <p>Followers: {{ userOne.followers }}</p>
+        <p>Following: {{ userOne.following }}</p>
+      </div>
+      <div [ngClass]="userTwoClass" class="user-box">
+        <h3>User {{ userTwo.username }} Stats:</h3>
+        <p>Name: {{ userTwo.name }}</p>
+        <p>Location: {{ userTwo.location }}</p>
+        <p>Bio: {{ userTwo.bio }}</p>
+        <p>Titles: {{ userTwo.titles?.join(', ') || 'None' }}</p>
+        <p>Favorite Language: {{ userTwo.favorite_language }}</p>
+        <p>Public Repos: {{ userTwo.public_repos }}</p>
+        <p>Total Stars: {{ userTwo.total_stars }}</p>
+        <p>Highest Starred Repository: {{ userTwo.highest_starred }}</p>
+        <p>Perfect Repos: {{ userTwo.perfect_repos }}</p>
+        <p>Followers: {{ userTwo.followers }}</p>
+        <p>Following: {{ userTwo.following }}</p>
+      </div>
+
+    </div>
+  </div>
 </div>
