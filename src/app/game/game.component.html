@@ -1,0 +1,51 @@
+<div class="game-page">
+  <div class="game-container">
+    <div class="game-container-top-bar">
+      <button class="back-button" (click)="backToHome()">Home</button>
+      <h1>Guess the Song!</h1>
+    </div>
+
+    <!-- Guessed Songs -->
+    <div class="game-container-guesses">
+      <div class="game-guess">{{gameGuesses[0]}}</div>
+      <div class="game-guess">{{gameGuesses[1]}}</div>
+      <div class="game-guess">{{gameGuesses[2]}}</div>
+      <div class="game-guess">{{gameGuesses[3]}}</div>
+      <div class="game-guess">{{gameGuesses[4]}}</div>
+      <div class="game-guess">{{gameGuesses[5]}}</div>
+    </div>
+
+    <!-- Song select and guess button -->
+    <div class="game-song-lookup">
+      <select id="songDropdown" [(ngModel)]="selectedSong">
+        <option *ngFor="let track of playlistTracks" [value]="track">{{ track }}</option>
+      </select>
+    </div>
+    <div class="game-song-search">
+      <button (click)="checkGuess()">Guess!</button>
+    </div>
+    <!-- Song player -->
+    <div id="songPlayer" class="game-music-player"></div>
+
+    <!-- You Won! popup -->
+    <div id="winPopup" class="game-popup" style="display: none;">
+      <div class="game-popup-container">
+        <h2>Congrats, You won!!</h2>
+        <h2>Total moves: {{currentGuess}}</h2>
+        <h2>Enter a name to save your score!</h2>
+        <input type="text" [(ngModel)]="playerName" placeholder="Your Name">
+        <button (click)="resetGame()">Play Again!</button>
+      </div>
+    </div>
+
+    <!-- You Lose :( popup -->
+    <div id="losePopup" class="game-popup" style="display: none;">
+      <div class="game-popup-container">
+        <h2>You lost :(</h2>
+        <h2>Enter a name to save your score!</h2>
+        <input type="text" [(ngModel)]="playerName" placeholder="Your Name">
+        <button (click)="resetGame()">Play Again!</button>
+      </div>
+    </div>
+  </div>
+</div>

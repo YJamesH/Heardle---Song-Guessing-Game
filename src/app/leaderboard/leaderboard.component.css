@@ -1,0 +1,60 @@
+.container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.innerbox {
+    width: 80%;
+}
+
+.scoreboard {
+    border: 2px solid grey;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.scorecard {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    border-radius: 10px;
+    border: 1px solid lightgrey;
+    margin-bottom: 3px;
+}
+
+.back-button {
+    width: 100px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid lightgray;
+    background-color: rgba(128, 128, 128, 0.541);
+    cursor: pointer;
+}
+
+.correct {
+    background-color: rgba(3, 161, 3, 0.692);
+}
+
+.correct-2 {
+    background-color: rgba(2, 128, 2, 0.473)
+}
+
+.correct-3 {
+    background-color: rgba(189, 221, 44, 0.5)
+}
+
+.correct-4 {
+    background-color: rgba(189, 221, 44, 0.397)
+}
+
+.correct-5 {
+    background-color: rgba(204, 224, 113, 0.37)
+}
+
+.correct-6 {
+    background-color: rgba(204, 224, 113, 0.205)
+}
+
+.wrong {
+    background-color: rgba(255, 0, 0, 0.452);
+}

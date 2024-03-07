@@ -1,0 +1,84 @@
+.settings-container {
+    display: flex;
+    justify-content: center;
+}
+
+.settings-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.back-button {
+    width: 100px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid lightgray;
+    background-color: rgba(128, 128, 128, 0.541);
+    cursor: pointer;
+}
+
+.search-playlist label{
+    font-size: 20px;
+}
+
+.search-playlist input {
+    height: 24px;
+    width: 300px;
+    border-radius: 5px;
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+    border: 2px solid grey;
+    border-right: 1px;
+}
+
+.search-playlist button {
+    cursor: pointer;
+    height: 30px;
+    background-color: #1eadef;
+    border: 2px solid grey;
+    border-left: none;
+    border-radius: 5px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+.select-playlists {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.playlist-to-add {
+    cursor: pointer;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.selected-playlist {
+    height: 400px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: rgba(109, 109, 122, 0.363);
+    max-width: 600px;
+}
+
+.selected-playlist-info {
+    display: flex;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.image-holder {
+    background-color: black;
+    padding: 6px;
+    
+}
+
+.selected-playlist-info-desc {
+    padding: 10px;
+    text-align: center;
+}

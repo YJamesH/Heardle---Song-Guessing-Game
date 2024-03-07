@@ -1,0 +1,15 @@
+<button class="pushable">
+    <span class="shadow"></span>
+    <span class="edge" 
+    [ngStyle]="{'background': '
+    linear-gradient(
+        to left,
+        hsl(' + deg + 'deg 100% 16%) 0%,
+        hsl(' + deg + 'deg 100% 32%) 8%,
+        hsl(' + deg + 'deg 100% 32%) 92%,
+        hsl(' + deg + 'deg 100% 16%) 100%
+    '}"></span>
+    <span class="front" [ngStyle]="{'background': 'hsl(' + deg + ', 100%, 47%)', 'color': color, 'padding': pad}">
+        <ng-content></ng-content>
+    </span>
+</button>

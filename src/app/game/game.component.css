@@ -1,0 +1,201 @@
+/* ENTIRE GAME PAGE SECTION */
+.game-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* GAMEPLAY SECTION */
+.game-container-top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.back-button {
+  background-color: #1eadef;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1em;
+  padding: 8px 12px;
+  margin-right: 20px;
+  transition: background-color 0.3s;
+}
+
+.back-button:hover {
+  background-color: #098fcd;
+}
+
+.game-container {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  padding: 30px 40px;
+  border: 2px solid #c8c6c6;
+  border-radius: 20px;
+  min-width: 600px;
+  background-color: #f8f8f8;
+  position: relative;
+}
+
+.game-container h1 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* GAME GUESSED SECTION */
+.game-container-guesses {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.game-guess {
+  margin: 5px 0;
+  width: 100%;
+  min-height: 42px;
+  border: 2px solid #c8c6c6;
+  border-radius: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+/* GAME SONG SELECT DROPDOWN SECTION */
+.game-song-lookup {
+  margin-top: 20px;
+}
+
+#songDropdown {
+  padding: 10px 16px 10px 8px;
+  font-size: .8em;
+  border: 2px solid #c8c6c6;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* GAME SEARCH BUTTON SECTION */
+.game-song-search button {
+  padding: 15px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s;
+}
+
+.game-song-search {
+  margin-top: 20px;
+}
+
+.game-song-search button {
+  padding: 8px 12px;
+  background-color: #1eadef;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s;
+}
+
+.game-song-search button:hover {
+  background-color: #098fcd;
+}
+
+/* MUSIC PLAYER SECTION */
+.game-music-player {
+  margin-top: 20px;
+  border: 2px solid #c8c6c6;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #fff;
+}
+
+/* WIN/LOSE SCREEN POPUP SECTION */
+.game-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 5;
+  color: rgb(0, 0, 0);
+}
+
+.game-popup-container {
+  background-color: #f8f8f8e9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid #676767;
+  border-radius: 15px;
+  padding: 20px;
+  width: 70%;
+  max-width: 600px;
+  height: 60%;
+  box-sizing: border-box;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.popup {
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.game-popup-container input {
+  width: 40%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 2px solid #676767;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 1em;
+  text-align: center;
+}
+
+.game-popup-container input::placeholder {
+  color: #676767;
+}
+
+
+.game-popup button {
+  margin-top: 20px;
+  background-color: #1eadef;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.2em;
+  transition: background-color 0.3s;
+}
+
+.game-popup button:hover {
+  background-color: #098fcd;
+}

@@ -1,0 +1,18 @@
+<button class="back-button" [routerLink]="['']">Home</button>
+<div class="container">
+    <div class="innerbox">
+        <h2>Leaderboard</h2>
+        <div class="scoreboard">
+            <div class="scorecard" style="border: none;">
+                <h4 (click)="sortByString('name')" style="cursor: pointer;">Username:</h4>
+                <h4 (click)="sortByGuesses()" style="cursor: pointer;">Number of Guesses:</h4>
+                <h4 (click)="sortByString('playlist')" style="cursor: pointer;">Playlist:</h4>
+            </div>
+            <div class="scorecard {{colorCard(score.guesses)}}" *ngFor="let score of scoreboard">
+                <p>{{score.name}}</p>
+                <p>{{score.guesses > 0 ? score.guesses : "N/A"}}</p>
+                <P>{{score.playlist}}</P>
+            </div>
+        </div>
+    </div>
+</div>

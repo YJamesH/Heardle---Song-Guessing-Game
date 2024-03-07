@@ -1,0 +1,50 @@
+<button class="back-button" [routerLink]="['']">Home</button>
+<br>
+<br>
+<div class="settings-container">
+    <div class="settings-menu">
+    <form class="search-playlist">
+        <label for="find-album">Search Albums:</label>
+        <br>
+        <div>
+            <input id="find-album" #box (keyup)="updateAlbum(box.value)">
+            <button class="search-button" (click)="getData()">Search</button>
+        </div>
+    </form>
+    <br>
+    <div class="select-playlists">
+        <div *ngFor="let item of playlistsToAdd" class="playlist-to-add">
+            <div (click)="changeCurrentPlaylist(item)">
+                <h4 *ngIf="item.name">{{item.name}}</h4>
+                <h4 *ngIf="!item.name">No Title</h4>
+                <img
+                [src]="item.images[0].url"
+                height="200px"
+                />
+            </div>
+        </div>
+    </div>
+    <br>
+    <h3 *ngIf="message !== ''">{{message}}</h3>
+    <div *ngIf="currentPlaylist.id !== '0'" class="selected-playlist">
+        <h2>Current Playlist:</h2>
+        <div class="selected-playlist-info">
+            <div class="image-holder">
+                <img
+                [src]="currentPlaylist.images[0].url"
+                height="300px"
+                style="top: 2px; position: relative; border-radius: 3px;"
+                />
+            </div>
+            <div class="selected-playlist-info-desc">
+                <h3>{{currentPlaylist.name}}</h3>
+                <h4>{{currentPlaylist.description}}</h4>
+                <h4>Tracks: {{currentPlaylist.tracks.total}}</h4>
+            </div>    
+        </div>
+    </div>
+    <br>
+    <app-button *ngIf="currentPlaylist.tracks.total === 0" deg="170" color="white">Play Game</app-button>
+    <app-button *ngIf="currentPlaylist.tracks.total !== 0" deg="130" color="black" (click)="playGame()">Play Game</app-button>
+    </div>
+</div>

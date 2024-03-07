@@ -1,0 +1,12 @@
+.main-menu {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.menu-button {
+    cursor: pointer;
+    width: 300px;
+    height: 50px;
+    
+}
