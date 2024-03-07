@@ -1,7 +1,7 @@
 <div *ngIf="authLoading || configLoading">Loading...</div>
 <div *ngIf="!authLoading && !configLoading" class="main-menu">
   <div class="menu-holder">
-    <h1>Welcome to Heardle, a Music Guessing Game!</h1>
+    <h1>Welcome to Heardle, a Song Guessing Game!</h1>
     <br>
     <p *ngIf="!valid">Not enough tracks with a preview URL to play game, head to the settings page and pick a new playlist</p>
     <app-button pad="12px 112px"  *ngIf="valid" [routerLink]="['game']">Play Game</app-button>
