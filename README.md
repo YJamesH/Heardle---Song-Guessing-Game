@@ -1,4 +1,8 @@
-# Instructions to run
+#  Heardle
+
+This is a Front-End project with the idea to create an interactive song guessing game. It utilizes the Angular Framework and integrates with the Spotify API to fetch playlists and song previews. The app will have a home screen, game screen, settings page, and leaderboards showing all local instances of the game played. 
+
+## Instructions to run
 
 1. Download the repository and unzip
 2. Open VS code with the corresponding repository
@@ -6,9 +10,8 @@
 4. run 'ng serve'
 5. Open browser to the given URL (i.e. http://localhost:4200)
 
-# Overview
+## Overview
 
-This is a Song Guessing Game built using an Angular Framework, integrating Spotify API to fetch playlists and song previews
 
 Opening the App will first redirect you to the home page - you will need to select a Spotify Playlist with playable song previews in the Settings Tab before playing.
 
